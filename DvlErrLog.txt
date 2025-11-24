@@ -1,0 +1,32 @@
+[2025-11-23 10:24:32.961] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:33.351] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:33.539] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:33.757] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:34.023] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:34.195] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:34.414] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:56.962] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:57.424] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:57.631] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:57.816] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:58.009] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:58.208] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:58.372] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 10:24:58.564] WIN32 ERROR (CreateCoreWebView2EnvironmentWithOptions): 0x80070002 (2147942402) - Nie mo¿na odnaleŸæ okreœlonego pliku.
+
+[2025-11-23 12:31:15.238] ERROR: Failed to determine data directory.
+[2025-11-23 12:31:15.239] ERROR: Failed to initialize account storage.

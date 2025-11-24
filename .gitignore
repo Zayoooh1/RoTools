@@ -1,0 +1,7 @@
+build/
+external/WebView2Runtime/
+external/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
+external/MicrosoftEdgeWebView2RuntimeInstallerX64_offline.exe
+external/MicrosoftEdgeWebview2Setup.exe
+external/WebView2Runtime.msix
+external/WebView2Runtime.zip
