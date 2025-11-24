@@ -1,4 +1,4 @@
-# RoTools (MultiRoblox)
+# RoTools
 
 RoTools is a Windows desktop launcher that lets you run multiple Roblox accounts at once. It combines an account manager, a WebView2-based login dialog, automation helpers such as Auto Rejoin, and a self-update system connected to GitHub releases.
 
