@@ -1,81 +1,81 @@
-# Informacje o przechowywaniu danych
+Why Are There Separate Folders?
 
-## Gdzie są zapisywane dane kont?
+The developer version and the production version use separate folders to:
 
-Aplikacja RoTools przechowuje dane kont w folderze użytkownika Windows:
+✅ Prevent mixing test data with production data
 
-### Wersja produkcyjna (zainstalowana):
-```
-%LOCALAPPDATA%\RoTools\
-  └── AccountData.dat
-```
+✅ Avoid accidentally including developer data inside the installer
 
-### Wersja deweloperska (build\Release):
-```
-%LOCALAPPDATA%\RoTools_Dev\
-  └── AccountData.dat
-```
+✅ Allow testing without affecting production data
 
-## Dlaczego są oddzielne foldery?
+Data Security
+Data is stored locally per user:
 
-**Wersja deweloperska** i **wersja produkcyjna** używają **oddzielnych folderów**, aby:
+✅ Each Windows user has their own %LOCALAPPDATA% folder
 
-1. ✅ Uniknąć mieszania danych testowych z produkcyjnymi
-2. ✅ Zapobiec przypadkowemu skopiowaniu danych deweloperskich do instalatora
-3. ✅ Umożliwić testowanie bez wpływu na produkcyjne dane
+✅ Data is encrypted using Windows DPAPI (Data Protection API)
 
-## Bezpieczeństwo danych
+✅ Only the logged-in user can decrypt their data
 
-### Dane są przechowywane lokalnie per użytkownik:
-- ✅ Każdy użytkownik Windows ma swój własny folder `%LOCALAPPDATA%`
-- ✅ Dane są szyfrowane przy użyciu Windows DPAPI (Data Protection API)
-- ✅ Tylko użytkownik, który zalogował się do konta, może je odszyfrować
+What does this mean in practice?
 
-### Co to znaczy w praktyce?
+No data is copied by the installer
 
-1. **Dane NIE są kopiowane z instalatorem**
-   - Instalator kopiuje tylko program i assety
-   - NIE kopiuje żadnych plików z danymi kont
+The installer copies only the program files and assets
 
-2. **Każdy użytkownik ma oddzielne dane**
-   - Użytkownik A na komputerze 1: `C:\Users\UserA\AppData\Local\RoTools\`
-   - Użytkownik B na komputerze 1: `C:\Users\UserB\AppData\Local\RoTools\`
-   - Użytkownik A na komputerze 2: `C:\Users\UserA\AppData\Local\RoTools\`
-   
-   Każdy z tych folderów jest **całkowicie niezależny**.
+It does NOT copy any account data files
 
-3. **Developer vs Produkcja**
-   - Developer: `%LOCALAPPDATA%\RoTools_Dev\`
-   - Produkcja: `%LOCALAPPDATA%\RoTools\`
-   
-   Te foldery są **całkowicie oddzielone**.
+Each user has completely separate data
 
-## Jak sprawdzić, gdzie są moje dane?
+User A on PC 1: C:\Users\UserA\AppData\Local\RoTools\
 
-1. Naciśnij `Win + R`
-2. Wpisz: `%LOCALAPPDATA%\RoTools`
-3. Kliknij OK
+User B on PC 1: C:\Users\UserB\AppData\Local\RoTools\
 
-Zobaczysz folder z plikiem `AccountData.dat` (jeśli dodałeś jakieś konta).
+User A on PC 2: C:\Users\UserA\AppData\Local\RoTools\
 
-## Backup danych
+Each of these folders is completely independent.
 
-Jeśli chcesz zrobić backup swoich kont:
+Developer vs Production
 
-1. Skopiuj cały folder `%LOCALAPPDATA%\RoTools\` 
-2. Zachowaj go w bezpiecznym miejscu
-3. Aby przywrócić, skopiuj z powrotem do tej samej lokalizacji
+Developer: %LOCALAPPDATA%\RoTools_Dev\
 
-**⚠️ WAŻNE:** Plik `AccountData.dat` jest zaszyfrowany kluczem Twojego konta Windows. 
-Jeśli przywrócisz go na innym komputerze lub koncie użytkownika, **NIE będzie działać**.
+Production: %LOCALAPPDATA%\RoTools\
 
-## Dane WebView2
+These directories are fully separated.
 
-Również dane przeglądarki (cache, cookies) są przechowywane osobno:
+How to Check Where Your Data Is?
 
-- Produkcja: `%LOCALAPPDATA%\RoTools\WebView2\`
-- Developer: `%LOCALAPPDATA%\RoTools_Dev\WebView2\`
+Press Win + R
 
-## Ustawienia aktualizacji
+Type: %LOCALAPPDATA%\RoTools
 
-Plik `UpdateSettings.txt` znajduje się w folderze aplikacji (obok `MultiRoblox.exe`). Zawiera wyłącznie znacznik ostatniego sprawdzenia oraz wybraną częstotliwość (Everyday/Weekly/Monthly/Never); nie przechowuje żadnych danych kont ani tokenów.
+Click OK
+
+You will see the folder containing AccountData.dat (if you have added any accounts).
+
+Data Backup
+
+If you want to back up your accounts:
+
+Copy the entire %LOCALAPPDATA%\RoTools\ folder
+
+Store it somewhere safe
+
+To restore it, copy it back to the same location
+
+⚠️ IMPORTANT:
+The file AccountData.dat is encrypted using your Windows user account key.
+If you restore it on a different computer or a different user account, it will not work.
+
+WebView2 Data
+
+Browser-related data (cache, cookies) is also stored separately:
+
+Production: %LOCALAPPDATA%\RoTools\WebView2\
+
+Developer: %LOCALAPPDATA%\RoTools_Dev\WebView2\
+
+Update Settings
+
+The UpdateSettings.txt file is located in the application folder (next to MultiRoblox.exe).
+It contains only the last-check timestamp and the selected frequency (Everyday/Weekly/Monthly/Never); it does not store any account data or tokens.
